@@ -1,0 +1,32 @@
+/* Identidade visual Lumi: ameixa, blush e tons quentes. */
+:root {
+  --bg: #fbf8f6;
+  --surface: #ffffff;
+  --surface-soft: #f4eeeb;
+  --page-ink: #29212a;
+  --muted: #786d78;
+  --bar: #28172b;
+  --bar-soft: #39243d;
+  --accent: #c77d9d;
+  --accent-strong: #a9577d;
+  --accent-soft: #f4e3eb;
+  --gold: #c7a46b;
+  --card: #ffffff;
+  --card-ink: #29212a;
+  --borda: #eadfe5;
+  --painel: #fffdfc;
+  --painel-ink: #29212a;
+  --btn: #39243d;
+  --btn-ink: #ffffff;
+  --tag: #f1e2e9;
+  --ph: #f1e9ed;
+  --campo: #fffdfc;
+  --erro: #a8324d;
+  --success: #28745b;
+  --raio: 22px;
+  --raio-sm: 14px;
+  --sombra: 0 18px 45px rgba(48, 27, 48, .10);
+  --sombra-leve: 0 5px 18px rgba(48, 27, 48, .06);
+  --transicao: .22s cubic-bezier(.2,.75,.25,1);
+  color-scheme: light;
+}

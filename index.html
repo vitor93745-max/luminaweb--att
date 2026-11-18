@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lumi na Web | Beleza, cuidado e autoestima</title>
+  <meta name="description" content="Encontre produtos de beleza, cabelo e cuidados pessoais na Lumi na Web.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variaveis.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/paginas.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body data-pagina="inicio">
+  <header class="top" id="cabecalho"></header>
+
+  <main class="conteudo" id="inicio">
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div class="hero-copy">
+        <span class="etiqueta">Seu momento de cuidado começa aqui</span>
+        <h1 id="titulo-principal">Beleza que acompanha <em>você.</em></h1>
+        <p>Descubra produtos para cabelo, pele e rotina de beleza. Suas marcas favoritas, escolhidas para deixar o cuidado mais leve e especial.</p>
+        <div class="hero-acoes">
+          <a class="big" href="#produtos">Explorar produtos <span aria-hidden="true">↗</span></a>
+          <a class="hero-link" href="#marcas">Conheça nossas marcas</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-orbita"></div>
+        <div class="hero-frascos"><span class="frasco"></span><span class="frasco"></span><span class="frasco"></span></div>
+        <div class="hero-selo">Lumi<br>beauty<br>edit</div>
+      </div>
+    </section>
+
+    <ul class="beneficios" aria-label="Vantagens da loja">
+      <li><span class="beneficio-icone" aria-hidden="true">✧</span><div><strong>Marcas selecionadas</strong><span>Beleza e cuidado em um só lugar</span></div></li>
+      <li><span class="beneficio-icone" aria-hidden="true">♡</span><div><strong>Compra prática</strong><span>Escolha seus favoritos com facilidade</span></div></li>
+      <li><span class="beneficio-icone" aria-hidden="true">⌁</span><div><strong>Atendimento próximo</strong><span>Fale com a gente pelo WhatsApp</span></div></li>
+      <li><span class="beneficio-icone" aria-hidden="true">◇</span><div><strong>Envio para todo o Brasil</strong><span>Consulte condições no atendimento</span></div></li>
+    </ul>
+
+    <div class="cards3" id="destaques" aria-label="Categorias em destaque"></div>
+
+    <section class="secao" id="marcas">
+      <div class="secao-topo">
+        <div><span class="secao-kicker">Nomes que você conhece</span><h2>Marcas em destaque</h2></div>
+        <p>Seleção de marcas presentes na loja</p>
+      </div>
+      <div class="marcas-destaque" id="marcas-destaque"></div>
+    </section>
+
+    <section class="secao">
+      <div class="secao-topo">
+        <div><span class="secao-kicker">Encontre seu próximo favorito</span><h2 id="produtos">Seleção Lumi</h2></div>
+        <p id="contagem"></p>
+      </div>
+      <p class="filtro" id="filtro" hidden><span id="filtro-texto"></span><button class="secundario" type="button" id="filtro-limpar">Limpar filtros</button></p>
+      <p class="vazio" id="vazio" hidden>Nenhum produto encontrado. Tente outro nome, marca ou categoria.</p>
+      <div class="grid" id="grade"></div>
+    </section>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/usuario.js"></script>
+  <script src="js/carrinho.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/produtos.js"></script>
+  <script src="js/busca.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

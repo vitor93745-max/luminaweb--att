@@ -1,0 +1,156 @@
+/* Faixa de serviço */
+.aviso { padding: 8px 18px; background: var(--bar); color: #f8edf2; text-align: center; font-size: 11px; font-weight: 600; letter-spacing: .11em; text-transform: uppercase; }
+/* Cabeçalho */
+.top { position: sticky; top: 0; z-index: 30; background: rgba(255,253,252,.96); border-bottom: 1px solid rgba(234,223,229,.85); backdrop-filter: blur(16px); }
+.top-inner { width: min(1240px, 100%); min-height: 86px; margin: auto; padding: 14px 28px; display: flex; align-items: center; gap: 28px; }
+.logo { display: inline-flex; flex-direction: column; flex: 0 0 auto; color: var(--bar); line-height: 1; }
+.logo strong { font-family: Georgia, serif; font-size: 27px; font-weight: 700; letter-spacing: -.06em; }
+.logo span { margin-top: 6px; color: var(--muted); font-size: 9px; letter-spacing: .22em; text-transform: uppercase; }
+.busca-wrap { position: relative; flex: 1; max-width: 490px; margin-left: auto; }
+.busca-icone { position: absolute; left: 17px; top: 50%; transform: translateY(-50%); color: #8e7e89; font-size: 20px; pointer-events: none; }
+.search { width: 100%; min-width: 0; padding: 12px 18px 12px 46px; border: 1px solid var(--borda); border-radius: 999px; background: #f8f3f5; color: var(--page-ink); outline: none; transition: border-color var(--transicao), background var(--transicao), box-shadow var(--transicao); }
+.search::placeholder { color: #9a8e98; }
+.search:focus { border-color: var(--accent); background: #fff; box-shadow: 0 0 0 4px rgba(199,125,157,.12); }
+.top-acoes { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+.link-topo { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 42px; padding: 10px 15px; border: 1px solid transparent; border-radius: 999px; color: var(--bar); font-size: 13px; font-weight: 700; transition: background var(--transicao), color var(--transicao), border-color var(--transicao), transform var(--transicao); }
+.link-topo:hover { background: var(--accent-soft); color: var(--accent-strong); }
+.link-topo:active { transform: scale(.97); }
+.link-sacola { background: var(--bar); color: #fff; }
+.link-sacola:hover { background: var(--accent-strong); color: #fff; }
+.contador-sacola { display: inline-grid; min-width: 21px; height: 21px; place-items: center; padding: 0 5px; border-radius: 99px; background: #fff; color: var(--bar); font-size: 11px; }
+.menu { position: relative; width: min(1240px, 100%); margin: auto; padding: 0 28px 13px; }
+.pills { display: flex; gap: 5px; width: 100%; overflow-x: auto; scrollbar-width: none; }
+.pills::-webkit-scrollbar { display: none; }
+.pills button { position: relative; flex: none; padding: 8px 14px; border: 0; border-radius: 999px; background: transparent; color: #6d606b; font-size: 12px; font-weight: 700; cursor: pointer; transition: background var(--transicao), color var(--transicao), transform var(--transicao); }
+.pills button::after { content: ""; display: inline-block; width: 6px; height: 6px; margin: 0 0 2px 8px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); transition: transform var(--transicao); }
+.pills button:hover, .pills button.aberta { background: var(--accent-soft); color: var(--accent-strong); }
+.pills button:active { transform: scale(.97); }
+.pills button.aberta::after { transform: rotate(225deg); }
+.painel { position: absolute; top: calc(100% + 8px); left: 28px; z-index: 35; width: 320px; max-height: 70vh; padding: 20px; overflow: auto; background: var(--painel); color: var(--painel-ink); border: 1px solid var(--borda); border-radius: 18px; box-shadow: var(--sombra); }
+.painel h3 { margin: 0 0 15px; padding-bottom: 12px; border-bottom: 1px solid var(--borda); font-size: 17px; }
+.painel h4 { margin: 18px 0 8px; color: var(--muted); font-size: 10px; letter-spacing: .13em; text-transform: uppercase; }
+.painel .lista { display: flex; flex-direction: column; gap: 3px; }
+.painel .lista button { padding: 9px 11px; border: 0; border-radius: 10px; background: transparent; color: inherit; text-align: left; font-size: 13px; cursor: pointer; transition: background var(--transicao), color var(--transicao); }
+.painel .lista button:hover { background: var(--accent-soft); color: var(--accent-strong); }
+.painel .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.painel .chips button { padding: 7px 10px; border: 1px solid var(--borda); border-radius: 99px; background: #fff; color: var(--page-ink); font-size: 11px; cursor: pointer; transition: all var(--transicao); }
+.painel .chips button:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-strong); }
+/* Botões */
+.big { display: inline-flex; align-items: center; justify-content: center; gap: 9px; width: auto; min-height: 48px; margin-top: 8px; padding: 13px 23px; border: 1px solid var(--bar); border-radius: 999px; background: var(--bar); color: #fff; font-size: 13px; font-weight: 700; letter-spacing: .01em; text-align: center; cursor: pointer; transition: background var(--transicao), border-color var(--transicao), color var(--transicao), transform var(--transicao), box-shadow var(--transicao); }
+.big:hover { border-color: var(--accent-strong); background: var(--accent-strong); box-shadow: 0 8px 20px rgba(169,87,125,.2); }
+.big:active { transform: translateY(1px) scale(.985); box-shadow: none; }
+.big:disabled { opacity: .5; cursor: not-allowed; }
+.secundario { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 9px 15px; border: 1px solid var(--borda); border-radius: 999px; background: #fff; color: var(--bar); font-size: 12px; font-weight: 700; cursor: pointer; transition: all var(--transicao); }
+.secundario:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-strong); }
+.secundario:active { transform: scale(.97); }
+/* Hero */
+.hero { position: relative; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; min-height: 440px; overflow: hidden; padding: clamp(30px, 6vw, 72px); border: 1px solid #efdee6; border-radius: 30px; background: linear-gradient(115deg, #f7e9ee 0%, #f8eeeb 55%, #ead7df 100%); box-shadow: var(--sombra-leve); }
+.hero-copy { position: relative; z-index: 2; max-width: 580px; }
+.etiqueta { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px; padding: 7px 12px; border: 1px solid rgba(169,87,125,.18); border-radius: 99px; background: rgba(255,255,255,.58); color: var(--accent-strong); font-size: 10px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.etiqueta::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-strong); }
+.hero h1 { max-width: 11ch; margin: 0 0 18px; color: var(--bar); }
+.hero h1 em { color: var(--accent-strong); font-family: Georgia, serif; font-weight: 500; }
+.hero p { max-width: 48ch; margin: 0 0 22px; color: #6e606a; font-size: 15px; }
+.hero-acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 15px; }
+.hero .big { min-width: 175px; }
+.hero-link { color: var(--bar); font-size: 12px; font-weight: 700; text-decoration: underline; text-decoration-color: #cda8b8; text-underline-offset: 4px; }
+.hero-visual { position: relative; min-height: 310px; display: grid; place-items: center; }
+.hero-orbita { position: absolute; width: min(34vw, 370px); aspect-ratio: 1; border: 1px solid rgba(169,87,125,.22); border-radius: 50%; }
+.hero-orbita::before, .hero-orbita::after { content: ""; position: absolute; border: 1px solid rgba(169,87,125,.18); border-radius: 50%; }
+.hero-orbita::before { inset: 10%; } .hero-orbita::after { inset: 22%; }
+.hero-frascos { position: relative; z-index: 1; display: flex; align-items: end; gap: 13px; transform: rotate(-7deg); }
+.frasco { position: relative; display: block; width: 76px; height: 178px; border: 1px solid rgba(83,48,68,.16); border-radius: 17px 17px 12px 12px; background: linear-gradient(110deg, #fff9f6, #d8b6c4 65%, #c38da4); box-shadow: 13px 20px 28px rgba(79,43,65,.14); }
+.frasco::before { content: ""; position: absolute; top: -17px; left: 25px; width: 26px; height: 18px; border-radius: 5px 5px 2px 2px; background: #9c7185; }
+.frasco::after { content: "LUMI"; position: absolute; top: 45%; left: 0; width: 100%; color: #68485a; font-family: Georgia,serif; font-size: 13px; letter-spacing: .12em; text-align: center; }
+.frasco:nth-child(2) { width: 94px; height: 220px; background: linear-gradient(110deg, #fefcf6, #d9c8a8 65%, #b69b70); }
+.frasco:nth-child(2)::before { top: -22px; left: 32px; width: 30px; height: 23px; background: #b69b70; }
+.frasco:nth-child(2)::after { top: 48%; color: #6f6048; }
+.frasco:nth-child(3) { width: 66px; height: 145px; background: linear-gradient(110deg, #fff7f3, #c9a5b9 65%, #a97a97); }
+.frasco:nth-child(3)::before { top: -13px; left: 22px; width: 22px; height: 14px; }
+.frasco:nth-child(3)::after { top: 44%; font-size: 11px; }
+.hero-selo { position: absolute; right: 4%; bottom: 7%; z-index: 2; display: grid; width: 94px; aspect-ratio: 1; place-items: center; border: 1px solid rgba(255,255,255,.7); border-radius: 50%; background: var(--bar); color: #fff; font-family: Georgia,serif; font-size: 13px; line-height: 1.25; text-align: center; transform: rotate(9deg); box-shadow: var(--sombra); }
+/* Benefícios */
+.beneficios { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; margin: 24px 0 0; padding: 18px 0; border-top: 1px solid var(--borda); border-bottom: 1px solid var(--borda); list-style: none; }
+.beneficios li { display: flex; align-items: center; gap: 12px; padding: 5px 18px; border-right: 1px solid var(--borda); }
+.beneficios li:last-child { border: 0; }
+.beneficio-icone { display: grid; flex: 0 0 38px; width: 38px; height: 38px; place-items: center; border-radius: 50%; background: var(--accent-soft); color: var(--accent-strong); font-size: 17px; }
+.beneficios strong { display: block; color: var(--bar); font-size: 11px; }
+.beneficios span { display: block; color: var(--muted); font-size: 10px; line-height: 1.4; }
+/* Seções */
+.secao { margin-top: 66px; }
+.secao-topo { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px; margin-bottom: 22px; }
+.secao-kicker { display: block; margin-bottom: 7px; color: var(--accent-strong); font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.secao-topo p { margin: 0; color: var(--muted); font-size: 12px; }
+.cards3 { display: none; }
+.marcas-destaque { display: grid; grid-template-columns: repeat(5,1fr); gap: 12px; }
+.marcas-destaque button { min-height: 76px; padding: 15px; border: 1px solid var(--borda); border-radius: 15px; background: #fff; color: #5d4b59; font-family: Georgia,serif; font-size: 17px; font-weight: 700; cursor: pointer; transition: border-color var(--transicao), background var(--transicao), color var(--transicao), transform var(--transicao), box-shadow var(--transicao); }
+.marcas-destaque button:hover { transform: translateY(-3px); border-color: #d8aabd; background: #fff9fb; color: var(--accent-strong); box-shadow: var(--sombra-leve); }
+.marcas-destaque button:active { transform: translateY(-1px) scale(.99); }
+.filtro { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; color: var(--muted); font-size: 12px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap: 18px; }
+.prod { display: flex; flex-direction: column; min-width: 0; padding: 10px 10px 16px; overflow: hidden; border: 1px solid var(--borda); border-radius: 19px; background: #fff; transition: transform var(--transicao), box-shadow var(--transicao), border-color var(--transicao); }
+.prod:hover { transform: translateY(-5px); border-color: #dfc3d0; box-shadow: var(--sombra); }
+.prod small { margin: 15px 5px 4px; color: var(--accent-strong); font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.prod h3 { flex: 1; min-height: 43px; margin: 0 5px 13px; color: var(--bar); font-size: 14px; font-weight: 700; line-height: 1.45; }
+.prod .big { width: calc(100% - 10px); min-height: 42px; margin: auto 5px 0; padding: 10px 13px; font-size: 11px; }
+.produto-visual { position: relative; display: grid; min-height: 210px; overflow: hidden; place-items: center; border-radius: 13px; background: linear-gradient(145deg,#f8edf1,#ead9e2); isolation: isolate; }
+.produto-visual::before { content: ""; position: absolute; width: 145px; height: 145px; border: 1px solid rgba(126,78,103,.13); border-radius: 50%; box-shadow: 0 0 0 18px rgba(255,255,255,.14),0 0 0 38px rgba(255,255,255,.12); }
+.produto-visual::after { content: "LUMI  /  BEAUTY"; position: absolute; right: 12px; bottom: 10px; color: rgba(74,48,65,.48); font-size: 8px; font-weight: 800; letter-spacing: .15em; }
+.produto-embalagem { position: relative; z-index: 1; display: grid; width: 76px; height: 132px; place-items: center; border: 1px solid rgba(80,53,70,.12); border-radius: 13px 13px 10px 10px; background: linear-gradient(100deg,#fffdf9,#d7bdc9 72%,#b88da3); box-shadow: 13px 18px 25px rgba(65,38,56,.16); color: #765568; font-family: Georgia,serif; font-size: 12px; letter-spacing: .08em; }
+.produto-embalagem::before { content: ""; position: absolute; top: -13px; width: 26px; height: 14px; border-radius: 5px 5px 1px 1px; background: #a77f94; }
+.produto-visual.cat-facial { background: linear-gradient(145deg,#f5eee5,#e4d2c1); }
+.produto-visual.cat-facial .produto-embalagem { width: 104px; height: 91px; border-radius: 14px; background: linear-gradient(110deg,#fffdf7,#d6c2a5); color: #76654d; }
+.produto-visual.cat-eletricos { background: linear-gradient(145deg,#eeeaf4,#d9cfe8); }
+.produto-visual.cat-eletricos .produto-embalagem { width: 54px; height: 150px; border-radius: 28px; background: linear-gradient(90deg,#faf8fc,#aaa0bd); color: #5e526f; }
+.produto-visual.cat-maquiagem { background: linear-gradient(145deg,#f8e9eb,#edcbd4); }
+.produto-visual.cat-maquiagem .produto-embalagem { width: 42px; height: 125px; border-radius: 7px; background: linear-gradient(90deg,#fff,#bd8299); }
+.produto-visual.cat-higiene { background: linear-gradient(145deg,#e9f0eb,#cbded2); }
+.produto-visual.cat-higiene .produto-embalagem { background: linear-gradient(90deg,#fff,#b6d0c1); color: #4e7863; }
+.produto-visual.cat-depilacao { background: linear-gradient(145deg,#f6eee7,#e9d9c9); }
+.produto-visual.cat-unha { background: linear-gradient(145deg,#f6e8ee,#e9c9d8); }
+.tag { position: absolute; top: 12px; left: 12px; z-index: 2; padding: 6px 10px; border: 1px solid rgba(255,255,255,.7); border-radius: 99px; background: rgba(255,255,255,.78); color: var(--accent-strong); font-size: 9px; font-weight: 800; letter-spacing: .06em; backdrop-filter: blur(8px); }
+
+/* Formas de embalagem: cada produto escolhe uma em dados.js (campo "forma") e a cor em "cor".
+   Sem "forma", vale o frasco padrão acima. O seletor longo garante que estas regras
+   vençam as regras por categoria (.cat-facial, .cat-eletricos...). */
+.produto-visual .produto-embalagem[data-forma] { padding: 0 5px; font-size: 9px; font-weight: 700; line-height: 1.25; text-align: center; overflow-wrap: anywhere; color: #4f3646; }
+
+/* tubo: de pé sobre a tampa, com a ponta achatada em cima */
+.produto-visual .produto-embalagem[data-forma="tubo"] { width: 76px; height: 126px; border-radius: 3px 3px 24px 24px; background: linear-gradient(rgba(60,30,50,.14), rgba(60,30,50,.14)) top / 100% 8px no-repeat, linear-gradient(100deg, #fffdf9, color-mix(in srgb, var(--cor, #b88da3) 50%, #fff) 68%, var(--cor, #b88da3)); }
+.produto-visual .produto-embalagem[data-forma="tubo"]::before { top: auto; bottom: -15px; width: 30px; height: 16px; border-radius: 0 0 7px 7px; background: color-mix(in srgb, var(--cor, #b88da3) 55%, #3b2a3c); }
+
+/* pote: corpo baixo e largo, com tampa */
+.produto-visual .produto-embalagem[data-forma="pote"] { width: 104px; height: 66px; border-radius: 12px; background: linear-gradient(100deg, #fffdf9, color-mix(in srgb, var(--cor, #b88da3) 45%, #fff) 70%, var(--cor, #b88da3)); }
+.produto-visual .produto-embalagem[data-forma="pote"]::before { top: -17px; width: 112px; height: 22px; border-radius: 9px 9px 4px 4px; background: linear-gradient(90deg, color-mix(in srgb, var(--cor, #b88da3) 75%, #fff), var(--cor, #b88da3) 55%, color-mix(in srgb, var(--cor, #b88da3) 75%, #000)); }
+
+/* caixa: kit de presente com tampa e fita */
+.produto-visual .produto-embalagem[data-forma="caixa"] { width: 118px; height: 82px; border-radius: 4px 4px 9px 9px; background: linear-gradient(100deg, color-mix(in srgb, var(--cor, #b88da3) 40%, #fff), var(--cor, #b88da3)); }
+.produto-visual .produto-embalagem[data-forma="caixa"]::before { top: -17px; width: 128px; height: 20px; border-radius: 6px; background: linear-gradient(90deg, transparent calc(50% - 7px), rgba(255,255,255,.8) calc(50% - 7px) calc(50% + 7px), transparent calc(50% + 7px)), color-mix(in srgb, var(--cor, #b88da3) 82%, #000); }
+
+/* tintura: caixa alta com uma bolinha e uma faixa na cor do tom */
+.produto-visual .produto-embalagem[data-forma="tintura"] { width: 76px; height: 122px; padding-top: 38px; border-radius: 5px; background: linear-gradient(var(--cor, #b88da3), var(--cor, #b88da3)) bottom / 100% 26% no-repeat, linear-gradient(100deg, #fffdf9, #efe6ea); }
+.produto-visual .produto-embalagem[data-forma="tintura"]::before { top: 12px; width: 30px; height: 30px; border: 3px solid #fff; border-radius: 50%; background: var(--cor, #b88da3); box-shadow: 0 0 0 1px rgba(80,53,70,.18); }
+
+/* modelador: cilindro inclinado com cabo, texto na vertical */
+.produto-visual .produto-embalagem[data-forma="modelador"] { width: 38px; height: 104px; border-radius: 19px 19px 8px 8px; rotate: 16deg; writing-mode: vertical-rl; letter-spacing: .1em; text-transform: uppercase; background: linear-gradient(90deg, color-mix(in srgb, var(--cor, #b88da3) 40%, #fff), var(--cor, #b88da3) 60%, color-mix(in srgb, var(--cor, #b88da3) 70%, #000)); }
+.produto-visual .produto-embalagem[data-forma="modelador"]::before { top: calc(100% - 4px); left: 50%; width: 22px; height: 42px; margin-left: -11px; border-radius: 0 0 11px 11px; background: linear-gradient(90deg, #4a3550, #2b1c30); writing-mode: horizontal-tb; }
+/* Rodapé e atalhos */
+.rodape { margin-top: 45px; padding: 52px max(28px,calc((100vw - 1184px)/2)); background: var(--bar); color: #f9f0f4; }
+.rodape-colunas { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 34px; max-width: 1184px; margin: auto; }
+.rodape-colunas h4 { margin: 0 0 14px; color: #d9a8bf; font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
+.rodape-colunas p, .rodape-colunas a { display: block; margin: 7px 0; color: rgba(255,255,255,.72); font-size: 12px; }
+.rodape-colunas a:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+.rodape-base { max-width: 1184px; margin: 34px auto 0; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.14); color: rgba(255,255,255,.48); font-size: 10px; }
+.wa { position: fixed; right: 22px; bottom: 22px; z-index: 20; display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border: 1px solid rgba(255,255,255,.35); border-radius: 99px; background: #286b55; color: #fff; font-size: 12px; font-weight: 700; box-shadow: 0 8px 24px rgba(30,80,62,.22); transition: transform var(--transicao), background var(--transicao); }
+.wa:hover { transform: translateY(-3px); background: #1e5945; }
+.wa:active { transform: scale(.97); }
+.tabs { display: none; }
+
+/* miniatura no carrinho: a embalagem é reduzida para caber no quadradinho, sem texto */
+.item-carrinho .ph { display: flex; align-items: center; justify-content: center; height: 76px; min-height: 0; overflow: hidden; }
+.item-carrinho .ph::before, .item-carrinho .ph::after { display: none; }
+.item-carrinho .ph .produto-embalagem { transform: none; scale: .5; flex: none; font-size: 0; }
+@media (max-width: 680px) {
+  .item-carrinho .ph { height: 58px; }
+  .item-carrinho .ph .produto-embalagem { scale: .4; }
+}

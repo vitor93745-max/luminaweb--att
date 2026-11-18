@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Entrar – Lumi na Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variaveis.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/paginas.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body data-pagina="login">
+  <header class="top" id="cabecalho"></header>
+
+  <main class="pagina">
+    <h1>Minha conta</h1>
+
+    <section class="caixa">
+      <div class="abas" role="tablist">
+        <button type="button" role="tab" id="aba-entrar" aria-selected="true">Entrar</button>
+        <button type="button" role="tab" id="aba-criar" aria-selected="false">Criar conta</button>
+      </div>
+
+      <form id="form-entrar" novalidate>
+        <div class="campo">
+          <label for="entrar-email">E-mail</label>
+          <input id="entrar-email" name="email" type="email" autocomplete="email">
+        </div>
+        <div class="campo">
+          <label for="entrar-senha">Senha</label>
+          <input id="entrar-senha" name="senha" type="password" autocomplete="current-password">
+        </div>
+        <p class="erro" id="erro-entrar" role="alert"></p>
+        <button class="big" type="submit">Entrar</button>
+      </form>
+
+      <form id="form-criar" novalidate hidden>
+        <div class="campo">
+          <label for="criar-nome">Nome</label>
+          <input id="criar-nome" name="nome" type="text" autocomplete="name">
+        </div>
+        <div class="campo">
+          <label for="criar-email">E-mail</label>
+          <input id="criar-email" name="email" type="email" autocomplete="email">
+        </div>
+        <div class="campo">
+          <label for="criar-senha">Senha (mínimo de 8 caracteres)</label>
+          <input id="criar-senha" name="senha" type="password" autocomplete="new-password">
+        </div>
+        <p class="erro" id="erro-criar" role="alert"></p>
+        <button class="big" type="submit">Criar conta</button>
+      </form>
+
+      <p class="nota">
+        Versão de demonstração: sua conta fica salva apenas neste navegador (a senha é guardada de forma protegida, mas não vai para nenhum servidor).
+      </p>
+    </section>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/usuario.js"></script>
+  <script src="js/carrinho.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pagina-login.js"></script>
+</body>
+</html>

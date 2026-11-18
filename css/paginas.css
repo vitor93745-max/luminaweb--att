@@ -1,0 +1,34 @@
+/* Layout das páginas internas */
+.pagina { width: min(900px,100%); margin: 0 auto; padding: 48px 24px 80px; }
+.pagina > h1 { margin-bottom: 26px; color: var(--bar); font-size: clamp(2rem,4vw,3rem); }
+.pagina > h1::after { content: ""; display: block; width: 52px; height: 3px; margin-top: 14px; border-radius: 9px; background: var(--accent); }
+.caixa { margin-bottom: 18px; padding: clamp(20px,4vw,32px); border: 1px solid var(--borda); border-radius: 20px; background: var(--surface); box-shadow: var(--sombra-leve); }
+.caixa h2 { margin: 0 0 18px; color: var(--bar); font-size: 19px; }
+.nota { color: var(--muted); font-size: 12px; }
+/* Carrinho */
+.item-carrinho { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--borda); }
+.item-carrinho:last-child { border-bottom: 0; }
+.item-carrinho .ph { flex: none; width: 76px; min-height: 76px; }
+.item-info { flex: 1; min-width: 0; }
+.item-info small { display: block; margin-bottom: 3px; color: var(--accent-strong); font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.item-info strong { display: block; color: var(--bar); font-size: 13px; line-height: 1.35; }
+.quantidade { display: flex; align-items: center; gap: 9px; padding: 5px; border: 1px solid var(--borda); border-radius: 99px; }
+.quantidade button { display: grid; width: 29px; height: 29px; place-items: center; border: 0; border-radius: 50%; background: var(--accent-soft); color: var(--accent-strong); font-size: 17px; cursor: pointer; transition: background var(--transicao),color var(--transicao); }
+.quantidade button:hover { background: var(--accent-strong); color: #fff; }
+.quantidade span { min-width: 16px; color: var(--bar); font-size: 12px; font-weight: 700; text-align: center; }
+.acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 18px; }
+#resumo > p:first-child { color: var(--muted); font-size: 13px; }
+#resumo > p:first-child strong { color: var(--bar); font-size: 18px; }
+#finalizar { width: 100%; }
+/* Login e perfil */
+.abas { display: flex; gap: 6px; margin-bottom: 24px; padding: 5px; border-radius: 99px; background: var(--surface-soft); }
+.abas button { flex: 1; min-height: 42px; padding: 10px; border: 0; border-radius: 99px; background: transparent; color: var(--muted); font-size: 12px; font-weight: 700; cursor: pointer; transition: all var(--transicao); }
+.abas button[aria-selected="true"] { background: var(--bar); color: #fff; box-shadow: 0 4px 12px rgba(40,23,43,.16); }
+.campo { display: flex; flex-direction: column; gap: 7px; margin-bottom: 17px; }
+.campo label { color: var(--bar); font-size: 12px; font-weight: 700; }
+.campo input { width: 100%; min-height: 48px; padding: 12px 15px; border: 1px solid var(--borda); border-radius: 12px; outline: none; background: var(--campo); color: var(--page-ink); font: inherit; transition: border-color var(--transicao),box-shadow var(--transicao); }
+.campo input:focus { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(199,125,157,.12); }
+.erro { min-height: 1.4em; margin: 0 0 8px; color: var(--erro); font-size: 12px; font-weight: 700; }
+.ok { min-height: 1.4em; margin: 10px 0 0; color: var(--success); font-size: 12px; font-weight: 700; }
+#form-entrar .big, #form-criar .big, #form-perfil .big { width: 100%; }
+#sair { margin-top: 8px; }

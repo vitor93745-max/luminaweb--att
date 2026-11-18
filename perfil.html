@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Meu perfil – Lumi na Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variaveis.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/paginas.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body data-pagina="perfil">
+  <header class="top" id="cabecalho"></header>
+
+  <main class="pagina">
+    <h1>Meu perfil</h1>
+
+    <section class="caixa">
+      <h2>Meus dados</h2>
+      <form id="form-perfil" novalidate>
+        <div class="campo">
+          <label for="perfil-nome">Nome</label>
+          <input id="perfil-nome" name="nome" type="text" autocomplete="name">
+        </div>
+        <div class="campo">
+          <label for="perfil-email">E-mail</label>
+          <input id="perfil-email" name="email" type="email" autocomplete="email">
+        </div>
+        <p class="erro" id="erro-perfil" role="alert"></p>
+        <div class="acoes">
+          <button class="big" type="submit">Salvar alterações</button>
+          <button class="secundario" type="button" id="sair">Sair da conta</button>
+        </div>
+        <p class="ok" id="ok-perfil" role="status"></p>
+      </form>
+    </section>
+
+    <section class="caixa">
+      <h2>Meus pedidos</h2>
+      <p class="vazio">Você ainda não fez nenhum pedido.</p>
+    </section>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/usuario.js"></script>
+  <script src="js/carrinho.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pagina-perfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Carrinho – Lumi na Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variaveis.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/paginas.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body data-pagina="carrinho">
+  <header class="top" id="cabecalho"></header>
+
+  <main class="pagina">
+    <h1>Seu carrinho</h1>
+
+    <section class="caixa" id="lista"></section>
+
+    <section class="caixa" id="resumo" hidden>
+      <p>Total de itens: <strong id="total-itens">0</strong></p>
+      <p class="nota">
+        Valores e frete são calculados ao finalizar a compra. Informe seu CEP no atendimento.
+      </p>
+      <a class="big" id="finalizar" href="#">Finalizar pelo WhatsApp</a>
+      <div class="acoes">
+        <button class="secundario" type="button" id="limpar">Esvaziar carrinho</button>
+        <a class="secundario" href="index.html#produtos">Continuar comprando</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/usuario.js"></script>
+  <script src="js/carrinho.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pagina-carrinho.js"></script>
+</body>
+</html>
